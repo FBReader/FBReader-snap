@@ -1,0 +1,23 @@
+[Desktop Entry]
+X-SnapInstanceName=fbreader
+Version=1.0
+Name=FBReader Book Reader
+Name[ru]=Читалка FBReader
+GenericName=Book Reader
+GenericName[ru]=Читалка
+Comment=Reading ebooks
+Comment[ru]=Чтение электронных книг
+Exec=fbreader %F
+Terminal=false
+Type=Application
+Icon=${SNAP}/meta/gui/fbreader.png
+Categories=Utility;
+MimeType=application/epub+zip;application/x-zip-compressed-fb2;application/x-fictionbook+xml;application/x-mobipocket-ebook;
+StartupWMClass=fbreader
+Keywords=book;ebook;reader;
+Actions=OpenLibrary;
+
+[Desktop Action OpenLibrary]
+Name=Open the Library
+Name[ru]=Открыть библиотеку
+Exec=fbreader -L
