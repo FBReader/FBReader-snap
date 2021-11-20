@@ -59,10 +59,16 @@ parts:
     source: /root/project/ziplib
     source-type: local
     plugin: make
+    filesets:
+      exclude-static-libs:
+        - -lib/*
+    prime:
+      - $exclude-static-libs
 
   app:
     after:
       - ziplib
+      - qt6
     source: /root/project/src
     source-type: local
     plugin: cmake
@@ -99,3 +105,8 @@ parts:
       - libxcb-shape0
       - libsqlite3-0
       - libunibreak1
+    filesets:
+      exclude-static-libs:
+        - -lib/*
+    prime:
+      - $exclude-static-libs
