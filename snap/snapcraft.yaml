@@ -2,12 +2,6 @@ name: fbreader
 base: core20
 version: '2.0beta1'
 
-plugs:
-  write-downloads:
-    interface: personal-files
-    write:
-      - $HOME/Downloads
-
 apps:
   fbreader:
     command: bin/FBReader
@@ -16,8 +10,8 @@ apps:
       - desktop-legacy
       - network
       - network-bind
-      - write-downloads
       - home
+      - x11
     environment:
       HOME: $SNAP_REAL_HOME
 
@@ -27,7 +21,7 @@ description: |
 icon: snap/gui/icon.png
 
 grade: devel
-confinement: devmode
+confinement: classic
 
 parts:
   qt6:
