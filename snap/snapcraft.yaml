@@ -2,6 +2,14 @@ name: fbreader
 base: core20
 version: '2.0beta1'
 
+plugs:
+  home-data:
+    interface: personal-files
+    write:
+      - $HOME/.local/share/FBReader.ORG Limited/FBReader
+      - $HOME/.config/FBReader.ORG Limited
+      - $HOME/.cache/FBReader.ORG Limited/FBReader
+
 apps:
   fbreader:
     command: bin/FBReader
@@ -11,6 +19,7 @@ apps:
       - network
       - network-bind
       - home
+      - home-data
       - x11
     environment:
       HOME: $SNAP_REAL_HOME
@@ -21,7 +30,7 @@ description: |
 icon: snap/gui/icon.png
 
 grade: devel
-confinement: classic
+confinement: strict
 
 parts:
   qt6:
@@ -84,6 +93,7 @@ parts:
       - libsqlite3-dev
       - libunibreak-dev
       - ccache
+      - git
     stage-packages:
       - libgl1
       - libegl1
