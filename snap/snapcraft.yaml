@@ -70,7 +70,8 @@ parts:
     plugin: make
     filesets:
       exclude-static-libs:
-        - -lib/*
+        - -lib
+        - -include
     prime:
       - $exclude-static-libs
 
@@ -117,6 +118,7 @@ parts:
       - libunibreak1
     filesets:
       exclude-static-libs:
-        - -lib/*
+        - -lib
+        - -include
     prime:
       - $exclude-static-libs
