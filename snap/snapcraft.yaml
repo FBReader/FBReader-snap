@@ -63,17 +63,22 @@ parts:
     plugin: dump
     stage:
       - usr/*
+    filesets:
+      exclude-unused:
+        - -usr/lib/cmake
+    prime:
+      - $exclude-unused
 
   ziplib:
     source: /root/project/ziplib
     source-type: local
     plugin: make
     filesets:
-      exclude-static-libs:
+      exclude-unused:
         - -lib
         - -include
     prime:
-      - $exclude-static-libs
+      - $exclude-unused
 
   app:
     after:
@@ -93,6 +98,7 @@ parts:
       - rapidjson-dev
       - libsqlite3-dev
       - libunibreak-dev
+      - libicu-dev
       - ccache
       - git
     stage-packages:
@@ -116,9 +122,11 @@ parts:
       - libxcb-shape0
       - libsqlite3-0
       - libunibreak1
+      - libicu66
     filesets:
-      exclude-static-libs:
+      exclude-unused:
         - -lib
         - -include
+        - -usr/lib/cmake
     prime:
-      - $exclude-static-libs
+      - $exclude-unused
