@@ -3,12 +3,12 @@ base: core20
 version: '2.0beta1'
 
 plugs:
-  home-data:
+  fbreader-config:
     interface: personal-files
     write:
-      - $HOME/.local/share/FBReader.ORG Limited/FBReader
+      - $HOME/.local/share/FBReader.ORG Limited
       - $HOME/.config/FBReader.ORG Limited
-      - $HOME/.cache/FBReader.ORG Limited/FBReader
+      - $HOME/.cache/FBReader.ORG Limited
 
 apps:
   fbreader:
@@ -19,7 +19,7 @@ apps:
       - network
       - network-bind
       - home
-      - home-data
+      - fbreader-config
       - x11
     environment:
       HOME: $SNAP_REAL_HOME
