@@ -35,29 +35,29 @@ confinement: strict
 parts:
   qt6:
     source-type: local
-    source: /root/project/Qt/6.2.1/gcc_64
+    source: /root/project/Qt/6.2.2/gcc_64
     override-pull:
       mkdir -p lib/x86_64-linux-gnu;
       mkdir -p plugins/iconengines;
       mkdir -p plugins/imageformats;
       mkdir -p plugins/platforms;
       mkdir -p plugins/tls;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libicudata.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libicui18n.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libicuuc.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libQt6Core.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libQt6Core5Compat.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libQt6DBus.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libQt6Gui.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libQt6Network.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libQt6OpenGL.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libQt6Svg.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libQt6Widgets.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/lib/libQt6XcbQpa.so.* lib/x86_64-linux-gnu;
-      cp /root/project/Qt/6.2.1/gcc_64/plugins/iconengines/libqsvgicon.so plugins/iconengines;
-      cp /root/project/Qt/6.2.1/gcc_64/plugins/imageformats/*.so plugins/imageformats;
-      cp /root/project/Qt/6.2.1/gcc_64/plugins/platforms/libqxcb.so plugins/platforms;
-      cp /root/project/Qt/6.2.1/gcc_64/plugins/tls/*.so plugins/tls;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libicudata.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libicui18n.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libicuuc.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6Core.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6Core5Compat.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6DBus.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6Gui.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6Network.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6OpenGL.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6Svg.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6Widgets.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6XcbQpa.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/iconengines/libqsvgicon.so plugins/iconengines;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/imageformats/*.so plugins/imageformats;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/platforms/libqxcb.so plugins/platforms;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/tls/*.so plugins/tls;
     organize:
       '*': usr/
     plugin: dump
@@ -88,7 +88,7 @@ parts:
     source-type: local
     plugin: cmake
     cmake-parameters:
-      - -DCMAKE_TOOLCHAIN_FILE=/root/project/Qt/6.2.1/gcc_64/lib/cmake/Qt6/qt.toolchain.cmake
+      - -DCMAKE_TOOLCHAIN_FILE=/root/project/Qt/6.2.2/gcc_64/lib/cmake/Qt6/qt.toolchain.cmake
       - -DCMAKE_INSTALL_PREFIX=/
     build-packages:
       - libgl-dev
