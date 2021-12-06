@@ -1,26 +1,26 @@
 name: fbreader
 base: core20
-version: '2.0beta1'
+version: 2.0beta1
 
 plugs:
   fbreader-config:
     interface: personal-files
     write:
-      - $HOME/.local/share/FBReader.ORG Limited
-      - $HOME/.config/FBReader.ORG Limited
-      - $HOME/.cache/FBReader.ORG Limited
+    - $HOME/.local/share/FBReader.ORG Limited
+    - $HOME/.config/FBReader.ORG Limited
+    - $HOME/.cache/FBReader.ORG Limited
 
 apps:
   fbreader:
     command: bin/FBReader
     plugs:
-      - desktop
-      - desktop-legacy
-      - network
-      - network-bind
-      - home
-      - fbreader-config
-      - x11
+    - desktop
+    - desktop-legacy
+    - network
+    - network-bind
+    - home
+    - fbreader-config
+    - x11
     environment:
       HOME: $SNAP_REAL_HOME
 
@@ -62,12 +62,12 @@ parts:
       '*': usr/
     plugin: dump
     stage:
-      - usr/*
+    - usr/*
     filesets:
       exclude-unused:
-        - -usr/lib/cmake
+      - -usr/lib/cmake
     prime:
-      - $exclude-unused
+    - $exclude-unused
 
   ziplib:
     source: /root/project/ziplib
@@ -75,58 +75,58 @@ parts:
     plugin: make
     filesets:
       exclude-unused:
-        - -lib
-        - -include
+      - -lib
+      - -include
     prime:
-      - $exclude-unused
+    - $exclude-unused
 
   app:
     after:
-      - ziplib
-      - qt6
+    - ziplib
+    - qt6
     source: /root/project/src
     source-type: local
     plugin: cmake
     cmake-parameters:
-      - -DCMAKE_TOOLCHAIN_FILE=/root/project/Qt/6.2.2/gcc_64/lib/cmake/Qt6/qt.toolchain.cmake
-      - -DCMAKE_INSTALL_PREFIX=/
+    - -DCMAKE_TOOLCHAIN_FILE=/root/project/Qt/6.2.2/gcc_64/lib/cmake/Qt6/qt.toolchain.cmake
+    - -DCMAKE_INSTALL_PREFIX=/
     build-packages:
-      - libgl-dev
-      - libegl-dev
-      - libfontconfig1-dev
-      - libxkbcommon-dev
-      - rapidjson-dev
-      - libsqlite3-dev
-      - libunibreak-dev
-      - libicu-dev
-      - ccache
-      - git
+    - libgl-dev
+    - libegl-dev
+    - libfontconfig1-dev
+    - libxkbcommon-dev
+    - rapidjson-dev
+    - libsqlite3-dev
+    - libunibreak-dev
+    - libicu-dev
+    - ccache
+    - git
     stage-packages:
-      - libgl1
-      - libegl1
-      - libfontconfig1
-      - libfreetype6
-      - libpng16-16
-      - libx11-6
-      - libxau6
-      - libxcb1
-      - libxdmcp6
-      - libxkbcommon0
-      - libxkbcommon-x11-0
-      - libxcb-icccm4
-      - libxcb-image0
-      - libxcb-keysyms1
-      - libxcb-randr0
-      - libxcb-render-util0
-      - libxcb-render0
-      - libxcb-shape0
-      - libsqlite3-0
-      - libunibreak1
-      - libicu66
+    - libgl1
+    - libegl1
+    - libfontconfig1
+    - libfreetype6
+    - libpng16-16
+    - libx11-6
+    - libxau6
+    - libxcb1
+    - libxdmcp6
+    - libxkbcommon0
+    - libxkbcommon-x11-0
+    - libxcb-icccm4
+    - libxcb-image0
+    - libxcb-keysyms1
+    - libxcb-randr0
+    - libxcb-render-util0
+    - libxcb-render0
+    - libxcb-shape0
+    - libsqlite3-0
+    - libunibreak1
+    - libicu66
     filesets:
       exclude-unused:
-        - -lib
-        - -include
-        - -usr/lib/cmake
+      - -lib
+      - -include
+      - -usr/lib/cmake
     prime:
-      - $exclude-unused
+    - $exclude-unused
