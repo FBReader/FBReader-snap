@@ -41,6 +41,7 @@ parts:
       mkdir -p plugins/iconengines;
       mkdir -p plugins/imageformats;
       mkdir -p plugins/platforms;
+      mkdir -p plugins/platformthemes;
       mkdir -p plugins/tls;
       cp /root/project/Qt/6.2.2/gcc_64/lib/libicudata.so.* lib/x86_64-linux-gnu;
       cp /root/project/Qt/6.2.2/gcc_64/lib/libicui18n.so.* lib/x86_64-linux-gnu;
@@ -57,6 +58,7 @@ parts:
       cp /root/project/Qt/6.2.2/gcc_64/plugins/iconengines/libqsvgicon.so plugins/iconengines;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/imageformats/*.so plugins/imageformats;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/platforms/libqxcb.so plugins/platforms;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/platformthemes/*.so plugins/platformthemes;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/tls/*.so plugins/tls;
     organize:
       '*': usr/
