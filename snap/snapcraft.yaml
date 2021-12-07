@@ -13,6 +13,8 @@ plugs:
 apps:
   fbreader:
     command: bin/FBReader
+    command-chain:
+    - bin/envelope.sh
     plugs:
     - desktop
     - desktop-legacy
@@ -23,6 +25,8 @@ apps:
     - x11
     environment:
       HOME: $SNAP_REAL_HOME
+    extensions:
+    - gnome-3-38
 
 summary: An ebook reader
 description: |
