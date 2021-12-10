@@ -8,7 +8,6 @@ plugs:
     write:
     - $HOME/.local/share/FBReader.ORG Limited
     - $HOME/.config/FBReader.ORG Limited
-    - $HOME/.cache/FBReader.ORG Limited
 
 apps:
   fbreader:
@@ -96,6 +95,7 @@ parts:
     cmake-parameters:
     - -DCMAKE_TOOLCHAIN_FILE=/root/project/Qt/6.2.2/gcc_64/lib/cmake/Qt6/qt.toolchain.cmake
     - -DCMAKE_INSTALL_PREFIX=/
+    - -DPACKAGE_TYPE=snap
     build-packages:
     - libgl-dev
     - libegl-dev
