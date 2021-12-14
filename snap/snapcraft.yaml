@@ -1,6 +1,6 @@
 name: fbreader
 base: core20
-version: 2.0beta1
+version: 2.0beta2
 
 plugs:
   fbreader-config:
