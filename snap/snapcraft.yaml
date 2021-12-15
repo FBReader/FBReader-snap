@@ -46,6 +46,9 @@ parts:
       mkdir -p plugins/platforms;
       mkdir -p plugins/platformthemes;
       mkdir -p plugins/tls;
+      mkdir -p plugins/wayland-shell-integration;
+      mkdir -p plugins/wayland-decoration-client;
+      mkdir -p plugins/wayland-graphics-integration-client;
       cp /root/project/Qt/6.2.2/gcc_64/lib/libicudata.so.* lib/x86_64-linux-gnu;
       cp /root/project/Qt/6.2.2/gcc_64/lib/libicui18n.so.* lib/x86_64-linux-gnu;
       cp /root/project/Qt/6.2.2/gcc_64/lib/libicuuc.so.* lib/x86_64-linux-gnu;
@@ -56,13 +59,21 @@ parts:
       cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6Network.so.* lib/x86_64-linux-gnu;
       cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6OpenGL.so.* lib/x86_64-linux-gnu;
       cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6Svg.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6WaylandClient.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6WaylandEglClientHwIntegration.so.* lib/x86_64-linux-gnu;
+      cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6WlShellIntegration.so.* lib/x86_64-linux-gnu;
       cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6Widgets.so.* lib/x86_64-linux-gnu;
       cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6XcbQpa.so.* lib/x86_64-linux-gnu;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/iconengines/libqsvgicon.so plugins/iconengines;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/imageformats/*.so plugins/imageformats;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/platforms/libqwayland-generic.so plugins/platforms;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/platforms/libqwayland-egl.so plugins/platforms;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/platforms/libqxcb.so plugins/platforms;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/platformthemes/*.so plugins/platformthemes;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/tls/*.so plugins/tls;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/wayland-shell-integration/*.so plugins/wayland-shell-integration;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/wayland-decoration-client/*.so plugins/wayland-decoration-client;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/wayland-graphics-integration-client/*.so plugins/wayland-graphics-integration-client;
     organize:
       '*': usr/
     plugin: dump
@@ -129,3 +140,4 @@ parts:
     - libsqlite3-0
     - libunibreak1
     - libicu66
+    - libffi7
