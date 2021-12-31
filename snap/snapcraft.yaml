@@ -43,6 +43,7 @@ parts:
       mkdir -p lib/x86_64-linux-gnu;
       mkdir -p plugins/iconengines;
       mkdir -p plugins/imageformats;
+      mkdir -p plugins/networkinformation;
       mkdir -p plugins/platforms;
       mkdir -p plugins/platformthemes;
       mkdir -p plugins/tls;
@@ -66,9 +67,8 @@ parts:
       cp /root/project/Qt/6.2.2/gcc_64/lib/libQt6XcbQpa.so.* lib/x86_64-linux-gnu;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/iconengines/libqsvgicon.so plugins/iconengines;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/imageformats/*.so plugins/imageformats;
-      cp /root/project/Qt/6.2.2/gcc_64/plugins/platforms/libqwayland-generic.so plugins/platforms;
-      cp /root/project/Qt/6.2.2/gcc_64/plugins/platforms/libqwayland-egl.so plugins/platforms;
-      cp /root/project/Qt/6.2.2/gcc_64/plugins/platforms/libqxcb.so plugins/platforms;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/networkinformation/*.so plugins/networkinformation;
+      cp /root/project/Qt/6.2.2/gcc_64/plugins/platforms/*.so plugins/platforms;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/platformthemes/*.so plugins/platformthemes;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/tls/*.so plugins/tls;
       cp /root/project/Qt/6.2.2/gcc_64/plugins/wayland-shell-integration/*.so plugins/wayland-shell-integration;
