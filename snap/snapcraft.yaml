@@ -1,6 +1,6 @@
 name: fbreader
 base: core20
-version: 2.0beta3
+version: 2.0beta4
 
 plugs:
   fbreader-config:
@@ -85,20 +85,8 @@ parts:
     prime:
     - $exclude-unused
 
-  ziplib:
-    source: /root/project/ziplib
-    source-type: local
-    plugin: make
-    filesets:
-      exclude-unused:
-      - -lib
-      - -include
-    prime:
-    - $exclude-unused
-
   app:
     after:
-    - ziplib
     - qt6
     source: /root/project/src
     source-type: local
