@@ -22,8 +22,6 @@ apps:
     - home
     - fbreader-config
     - x11
-    environment:
-      HOME: $SNAP_REAL_HOME
     extensions:
     - gnome-3-38
 
