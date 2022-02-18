@@ -12,7 +12,6 @@ The app is fast and highly customizable."
 
 license: Proprietary
 icon: snap/gui/icon.png
-contact: https://t.me/FBReaderChatRoom
 
 plugs:
   fbreader-config:
