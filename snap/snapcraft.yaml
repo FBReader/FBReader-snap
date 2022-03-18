@@ -1,6 +1,6 @@
 name: fbreader
 base: core20
-version: 2.0beta10
+version: 2.0beta11
 summary: Your Favourite Book Reader
 description: "A free ebook reader.
 
@@ -32,6 +32,7 @@ apps:
     - network-bind
     - home
     - fbreader-config
+    - removable-media
     - x11
     extensions:
     - gnome-3-38
