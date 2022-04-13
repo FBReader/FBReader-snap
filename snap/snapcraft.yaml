@@ -4,7 +4,7 @@ version: 2.0beta12
 summary: Your Favourite Book Reader
 description: "A free ebook reader.
 
-Opens and manages books stored on your device. Main ebook formats: ePub (including main features of ePub3), Kindle azw3 (a.k.a. mobi), fb2(.zip). Other supported formats: RTF, doc (MS Word), HTML, plain text.  
+Opens and manages books stored on your device. Main ebook formats: ePub (including main features of ePub3), Kindle azw3 (a.k.a. mobi), fb2(.zip). Other supported formats: RTF, doc (MS Word), HTML, plain text.
 
 FBReader can synchronize your library, bookmarks, and reading positions via the Book Network, a Google Drive™ based cloud service.
 
