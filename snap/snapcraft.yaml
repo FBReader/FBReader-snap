@@ -2,13 +2,13 @@ name: fbreader
 base: core20
 version: 2.0beta15
 summary: Your Favourite Book Reader
-description: "A free ebook reader.
+description: "Favourite Book Reader works on computers with all major operating systems (Linux, MacOSX, Windows) and mobile devices (iOS, Android). The FBReader features are
 
-Opens and manages books stored on your device. Main ebook formats: ePub (including main features of ePub3), Kindle azw3 (a.k.a. mobi), fb2(.zip). Other supported formats: RTF, doc (MS Word), HTML, plain text.
+1) Comfortable reading. Customisable text styles and colours for day and night modes, advanced navigation features, and bookmarks.
+2) Configurable network book sources list, from which you can download books for free and for a fee. You also can open your local books or add your preferred OPDS catalogues. FBReader provides a powerful catalogues browser, with browsing history, bookmarks, and search.
+3) Transparent cloud integration. FBReader synchronises your books, reading positions and bookmarks across all your devices. Start reading a book on your computer, then continue from the same place on a tablet or smartphone.
 
-FBReader can synchronize your library, bookmarks, and reading positions via the Book Network, a Google Drive™ based cloud service.
-
-The app is fast and highly customizable."
+Major book formats are ePub (including main features of ePub3), unencrypted Kindle azw3 (a.k.a. Mobipocket) and fb2(.zip). Other supported formats: RTF, doc (MS Word), HTML, and plain text."
 
 license: Proprietary
 icon: snap/gui/icon.png
