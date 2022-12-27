@@ -1,6 +1,6 @@
 name: fbreader
 base: core20
-version: 2.0beta17
+version: '2.0'
 summary: Your Favourite Book Reader
 description: "Favourite Book Reader works on computers with all major operating systems (Linux, MacOSX, Windows) and mobile devices (iOS, Android). The FBReader features are
 
@@ -109,6 +109,8 @@ parts:
     - libsqlite3-dev
     - libunibreak-dev
     - libicu-dev
+    - libbz2-dev
+    - liblzma-dev
     - ccache
     - git
     stage-packages:
@@ -134,3 +136,5 @@ parts:
     - libunibreak1
     - libicu66
     - libffi7
+    - libbz2-1.0
+    - liblzma5
