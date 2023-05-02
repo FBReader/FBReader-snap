@@ -46,6 +46,7 @@ parts:
     source: /root/project/Qt/6.5.0/gcc_64
     override-pull:
       mkdir -p lib/x86_64-linux-gnu;
+      mkdir -p lib/x86_64-linux-gnu;
       mkdir -p plugins/iconengines;
       mkdir -p plugins/imageformats;
       mkdir -p plugins/networkinformation;
@@ -82,6 +83,12 @@ parts:
       cp /root/project/Qt/6.5.0/gcc_64/plugins/wayland-shell-integration/*.so plugins/wayland-shell-integration;
       cp /root/project/Qt/6.5.0/gcc_64/plugins/wayland-decoration-client/*.so plugins/wayland-decoration-client;
       cp /root/project/Qt/6.5.0/gcc_64/plugins/wayland-graphics-integration-client/*.so plugins/wayland-graphics-integration-client;
+      mkdir -p lib/x86_64-linux-gnu/engines;
+      mkdir -p lib/x86_64-linux-gnu/providers;
+      cp /root/project/src/openssl/openssl-3.0.8/engines/*.so lib/x86_64-linux-gnu/engines;
+      cp /root/project/src/openssl/openssl-3.0.8/providers/*.so lib/x86_64-linux-gnu/providers;
+      cp /root/project/src/openssl/openssl-3.0.8/*.so lib/x86_64-linux-gnu;
+      cp /root/project/src/openssl/openssl-3.0.8/*.so.3 lib/x86_64-linux-gnu;
     organize:
       '*': usr/
     plugin: dump
