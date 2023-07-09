@@ -46,7 +46,6 @@ parts:
     source: /root/project/Qt/6.5.1/gcc_64
     override-pull:
       mkdir -p lib/x86_64-linux-gnu;
-      mkdir -p lib/x86_64-linux-gnu;
       mkdir -p plugins/iconengines;
       mkdir -p plugins/imageformats;
       mkdir -p plugins/networkinformation;
